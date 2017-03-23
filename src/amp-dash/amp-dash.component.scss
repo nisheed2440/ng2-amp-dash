@@ -1,0 +1,34 @@
+pre{
+    font-family: inherit;
+    font-size: inherit;
+    display: inline;
+}
+
+:host(){
+    display: inline;
+}
+
+.cursor {
+  font-weight: inherit;
+  font-size: inherit;
+  color: #0030FF;
+  -webkit-animation: 1s flash step-end infinite;
+  -moz-animation: 1s flash step-end infinite;
+  -ms-animation: 1s flash step-end infinite;
+  -o-animation: 1s flash step-end infinite;
+  animation: 1s flash step-end infinite;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  animation-name: flash;
+}
