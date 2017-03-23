@@ -19,7 +19,7 @@
   "repository": {
     "url": "https://github.com/nisheed2440/ng2-amp-dash.git"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/common": "^2.4.0",
     "@angular/core": "^2.4.0"
