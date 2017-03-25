@@ -1,7 +1,7 @@
 import { Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, Output } from '@angular/core';
 
 @Component({
-  selector: 'pd-amp-dash',
+  selector: 'amp-dash',
   templateUrl: './amp-dash.component.html',
   styleUrls: ['./amp-dash.component.scss']
 })

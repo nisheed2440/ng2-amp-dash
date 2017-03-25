@@ -19,6 +19,16 @@ pre{
   animation: 1s flash step-end infinite;
 }
 
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
 @keyframes flash {
   from, 50%, to {
     opacity: 1;

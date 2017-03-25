@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'pd-app',
   template: `
-   <pd-amp-dash [typeText]="title"></pd-amp-dash>
+   <amp-dash [typeText]="title"></amp-dash>
   `,
   styles: []
 })
