@@ -5,7 +5,7 @@
 
 **amp-dash** is an [Angular 2](http://www.angular.io) component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
 
-**amp-dash** was inspired by [SapientRazorfish](http://www.sapientrazorfish.com) logo and created to be used to follow brand guidelines. 
+**amp-dash** was inspired by the [SapientRazorfish](http://www.sapientrazorfish.com) logo and created to be used to follow the brand guidelines. 
 
 ---
 
@@ -150,7 +150,7 @@ Or
 
 Property | Type | Default Value | Description
 :---|:---|:---|:---
-typeText | `string or array` | `['']` | The strings to be typed
+typeText | `string | array` | `['']` | The strings to be typed
 typeDelay | `number` | `100` | Delay in ms before a character is printed
 eraseDelay | `number` | `2000` | Delay in ms before the displayed string is erased
 typeLoop | `boolean` | `false` | Loop over the string collection
