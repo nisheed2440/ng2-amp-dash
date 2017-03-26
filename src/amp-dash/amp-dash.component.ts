@@ -47,6 +47,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
         }
       } else {
         // Typewrite the data
+        this.captionIndex = 0;
         this.typewrite();
       }
     }
