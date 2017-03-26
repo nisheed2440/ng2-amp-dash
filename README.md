@@ -7,6 +7,8 @@
 
 **amp-dash** was inspired by the [SapientRazorfish](http://www.sapientrazorfish.com) logo and created to be used to follow the brand guidelines. 
 
+### [Demo Page](http://nisheed2440.github.io/amp-dash-demo/index.html)
+
 ---
 
 Installation
