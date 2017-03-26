@@ -34,10 +34,17 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     if(changes) {
       // If Text already exisits then delete it gracefully
       if(this.displayText) {
-        this.clearTimeouts();
-        this.captionIndex = 0;
-        this.setTypeText();
-        this.eraseDelayTimeout = setTimeout(() => this.erasewrite() , this.eraseDelay);
+        if(
+             changes.typeText 
+          || changes.typeDelay 
+          || changes.eraseDelay
+          || changes.typeLoop
+          ){
+          this.clearTimeouts();
+          this.captionIndex = 0;
+          this.setTypeText();
+          this.eraseDelayTimeout = setTimeout(() => this.erasewrite() , this.eraseDelay);
+        }
       } else {
         // Typewrite the data
         this.typewrite();

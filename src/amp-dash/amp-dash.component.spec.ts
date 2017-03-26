@@ -96,12 +96,12 @@ describe('AmpDashComponent', () => {
 
    it('should erase existing text before rendering new text', () => {
      component.typeText = testTextOne;
-     component.ngOnChanges(true);
+     component.ngOnChanges({typeText: true});
      jasmine.clock().tick(400); // 100ms x 4 (letters)
      expect(typewriteSpy).toHaveBeenCalled();
 
      component.typeText = testTextTwo;
-     component.ngOnChanges(true);
+     component.ngOnChanges({typeText: true});
      jasmine.clock().tick(2400); // 100ms x 4 (letters) + 2000ms erase delay
      expect(erasewriteSpy).toHaveBeenCalled();
      jasmine.clock().tick(3800);
