@@ -24,12 +24,12 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
   typeTextClone: string | string[] = [''];
   constructor() { }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     // Cleanup
     this.clearTimeouts();
   }
 
-  ngOnChanges(changes: any) {
+  ngOnChanges(changes: any): void {
 
     if(changes) {
       // If Text already exisits then delete it gracefully
@@ -70,7 +70,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     return;
   }
 
-  typewrite() {
+  typewrite(): void {
     this.clearTimeouts();
     this.setTypeText();
     if(this.typeTextClone.length) {
@@ -79,7 +79,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     }
   }
 
-  erasewrite() {
+  erasewrite(): void {
     this.clearTimeouts();
     this.captionText = this.displayText;
     this.captionLength = this.displayText.length;
@@ -89,7 +89,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     }
   }
 
-  type() {
+  type(): void {
     this.displayText = this.captionText.substr(0, this.captionLength++);
     this.clearTimeouts();
     if(this.captionLength < this.captionText.length + 1) {
@@ -110,7 +110,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     }
   }
 
-  erase() {
+  erase(): void {
     this.displayText = this.captionText.substr(0, this.captionLength--);
     this.clearTimeouts();
     if(this.captionLength >= 0) {
@@ -126,18 +126,18 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     }
   }
 
-  setCaptionText() {
+  setCaptionText(): void {
     this.captionText = this.typeTextClone[this.captionIndex++].trim();
   }
 
-  cancelTypeTimeout() {
+  cancelTypeTimeout(): void {
 
     if(this.typeTimeout) {
       clearTimeout(this.typeTimeout);
     }
   }
 
-  cancelEraseTimeout() {
+  cancelEraseTimeout(): void {
     if(this.eraseTimeout) {
       clearTimeout(this.eraseTimeout);
     }
@@ -146,7 +146,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
     }
   }
 
-  clearTimeouts() {
+  clearTimeouts(): void {
     this.cancelTypeTimeout();
     this.cancelEraseTimeout();
   }
