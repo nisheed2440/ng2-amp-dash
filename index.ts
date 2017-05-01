@@ -1,1 +1,0 @@
-export * from './src/amp-dash/amp-dash.module';

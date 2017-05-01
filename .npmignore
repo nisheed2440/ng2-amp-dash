@@ -41,6 +41,14 @@ testem.log
 Thumbs.db
 .vscode
 
-#Library
+# Ignored files
 aot
-lib
+src
+.angular-cli.json
+.editorconfig
+.gitignore
+.travis.yml
+karma.conf.js
+tslint.json
+*.ts
+!*.d.ts
