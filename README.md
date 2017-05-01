@@ -3,11 +3,13 @@
 [![npm version](https://badge.fury.io/js/amp-dash.svg)](https://badge.fury.io/js/amp-dash)
 [![Build Status](https://travis-ci.org/nisheed2440/ng2-amp-dash.svg?branch=master)](https://travis-ci.org/nisheed2440/ng2-amp-dash)
 
-**amp-dash** is an [Angular 2](http://www.angular.io) component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
+**amp-dash** is an [Angular 4](http://www.angular.io) component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
 
 **amp-dash** was inspired by the [SapientRazorfish](http://www.sapientrazorfish.com) logo and created to be used to follow the brand guidelines. 
 
 ### [Demo Page](http://nisheed2440.github.io/amp-dash-demo/index.html)
+
+**NOTE:** amp-dash has been updated to Angular 4, but can be used with Angular 2 as well, so long as the dependencies are satisfied
 
 ---
 
