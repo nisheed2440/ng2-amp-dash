@@ -31,6 +31,10 @@
     "@angular/common": "^4.1.0",
     "@angular/core": "^4.1.0"
   },
+  "dependencies": {
+    "@angular/common": "^4.1.0",
+    "@angular/core": "^4.1.0"
+  },
   "devDependencies": {
     "@angular/animations": "^4.1.0",
     "@angular/cli": "^1.0.1",
