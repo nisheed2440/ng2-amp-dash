@@ -9,12 +9,12 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test",
-    "test-travis": "ng test --single-run",
+    "start": "gulp pre:build && ng serve",
+    "test": "gulp pre:build && ng test",
+    "test-travis": "gulp pre:build && ng test --single-run",
     "lint": "ng lint",
-    "compile": "ngc -p temp/tsconfig.json",
-    "rollup": "rollup -c temp/rollup.config.js",
+    "compile": "ngc -p src/temp/tsconfig.json",
+    "rollup": "rollup -c src/temp/rollup.config.js",
     "amp-up": "gulp pre:build && npm run compile && npm run rollup && gulp post:build",
     "prepublish": "npm run amp-up"
   },

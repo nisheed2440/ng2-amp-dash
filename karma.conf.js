@@ -15,6 +15,9 @@ module.exports = function (config) {
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    exclude:[
+      './src/amp-dash/*.*'
+    ],
     files: [
       { pattern: './src/test.ts', watched: false }
     ],

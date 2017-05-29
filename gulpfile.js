@@ -24,25 +24,25 @@ function minifyTemplate(path, ext, file, cb) {
 
 gulp.task('copy:temp', function () {
     return gulp.src(['./src/amp-dash/**/*.*'])
-        .pipe(gulp.dest('./temp'));
+        .pipe(gulp.dest('./src/temp'));
 });
 
 gulp.task('css', function () {
-    return gulp.src(['./temp/**/*.scss'])
+    return gulp.src(['./src/temp/**/*.scss'])
         .pipe(sass())
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./temp'));
+        .pipe(gulp.dest('./src/temp'));
 });
 
 gulp.task('inline', function () {
-    return gulp.src(['./temp/**/*.ts'])
+    return gulp.src(['./src/temp/**/*.ts'])
         .pipe(inlineNg2Template({
-            base: '/temp',
+            base: '/src/temp',
             useRelativePaths: true,
             templateProcessor: minifyTemplate,
             removeLineBreaks:true
         }))
-        .pipe(gulp.dest('./temp'));
+        .pipe(gulp.dest('./src/temp'));
 });
 
 gulp.task('clean:before', function () {
@@ -50,13 +50,14 @@ gulp.task('clean:before', function () {
         'temp',
         'dist',
         'lib',
-        'aot'
+        'aot',
+        'src/temp'
     ]);
 });
 
 gulp.task('clean:after', function () {
     return del([
-        'temp'
+        'src/temp'
     ]);
 });
 

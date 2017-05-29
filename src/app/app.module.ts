@@ -1,4 +1,4 @@
-import { AmpDashModule } from '../../lib';
+import { AmpDashModule } from '../temp';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
