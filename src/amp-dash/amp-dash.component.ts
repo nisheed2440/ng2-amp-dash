@@ -2,56 +2,8 @@ import { Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, Output }
 
 @Component({
   selector: 'amp-dash',
-  template: `
-  <pre>{{displayText}}<span [ngClass]="cursorClass">{{cursorChar}}</span></pre>
-  <ng-content></ng-content>
-  `,
-  styles: [`
-        pre{
-        font-family: inherit;
-        font-size: inherit;
-        display: inline;
-    }
-
-    :host(){
-        display: inline;
-    }
-
-    .cursor {
-      font-weight: inherit;
-      font-size: inherit;
-      color: #0030FF;
-      -webkit-animation: 1s flash step-end infinite;
-      -moz-animation: 1s flash step-end infinite;
-      -ms-animation: 1s flash step-end infinite;
-      -o-animation: 1s flash step-end infinite;
-      animation: 1s flash step-end infinite;
-    }
-
-    @-webkit-keyframes flash {
-      from, 50%, to {
-        opacity: 1;
-      }
-
-      25%, 75% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes flash {
-      from, 50%, to {
-        opacity: 1;
-      }
-
-      25%, 75% {
-        opacity: 0;
-      }
-    }
-
-    .flash {
-      animation-name: flash;
-    }
-  `]
+  templateUrl:'./amp-dash.component.html',
+  styleUrls:['./amp-dash.component.css']
 })
 export class AmpDashComponent implements OnDestroy, OnChanges {
   @Input() typeText: string | string[] = [''];

@@ -13,9 +13,9 @@
     "test": "ng test",
     "test-travis": "ng test --single-run",
     "lint": "ng lint",
-    "compile": "ngc -p src/amp-dash/tsconfig.json",
-    "rollup": "rollup -c src/amp-dash/rollup.config.js",
-    "amp-up": "npm run compile && npm run rollup",
+    "compile": "ngc -p temp/tsconfig.json",
+    "rollup": "rollup -c temp/rollup.config.js",
+    "amp-up": "gulp pre:build && npm run compile && npm run rollup && gulp post:build",
     "prepublish": "npm run amp-up"
   },
   "author": {
@@ -27,7 +27,7 @@
     "url": "https://github.com/nisheed2440/ng2-amp-dash.git"
   },
   "private": false,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "^4.1.0",
     "@angular/core": "^4.1.0"
   },
@@ -35,7 +35,7 @@
     "@angular/animations": "^4.1.0",
     "@angular/cli": "^1.0.1",
     "@angular/compiler": "^4.1.0",
-    "@angular/compiler-cli": "^4.1.0",
+    "@angular/compiler-cli": "^4.1.3",
     "@angular/forms": "^4.1.0",
     "@angular/http": "^4.1.0",
     "@angular/platform-browser": "^4.1.0",
@@ -46,6 +46,13 @@
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0-beta.4",
     "core-js": "^2.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "html-minifier": "^3.5.2",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
@@ -54,6 +61,7 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.5.3",
     "rollup": "^0.41.6",
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
