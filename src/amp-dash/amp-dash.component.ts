@@ -14,6 +14,8 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
   @Input() cursorChar = '_';
   @Output() captionTyped = new EventEmitter();
   @Output() captionErased = new EventEmitter();
+  @Output() charTyped = new EventEmitter();
+  @Output() charErased = new EventEmitter();
   captionText = '';
   captionLength = 0;
   displayText = '';
@@ -91,6 +93,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
 
   type(): void {
     this.displayText = this.captionText.substr(0, this.captionLength++);
+    this.charTyped.emit([this.displayText]);
     this.clearTimeouts();
     if(this.captionLength < this.captionText.length + 1) {
       this.typeTimeout = setTimeout(() => this.type() , this.typeDelay);
@@ -112,6 +115,7 @@ export class AmpDashComponent implements OnDestroy, OnChanges {
 
   erase(): void {
     this.displayText = this.captionText.substr(0, this.captionLength--);
+    this.charErased.emit([this.displayText]);
     this.clearTimeouts();
     if(this.captionLength >= 0) {
       this.eraseTimeout = setTimeout(() => this.erase() , this.typeDelay);
